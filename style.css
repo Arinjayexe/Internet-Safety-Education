@@ -1,0 +1,1732 @@
+
+/* =========================
+   1. BASIC SETTINGS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #081120;
+    color: #f1f5f9;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+:root {
+    --primary: #38bdf8;
+    --secondary: #818cf8;
+    --background: #081120;
+    --card: #111d31;
+    --text: #f1f5f9;
+    --muted: #a6b4c8;
+}
+
+/* =========================
+   2. NAVIGATION
+========================= */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 8%;
+    background-color: #0c1729;
+    border-bottom: 1px solid #1e2c42;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: white;
+    white-space: nowrap;
+}
+
+.logo-icon {
+    color: var(--primary);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    color: #cbd5e1;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--primary);
+}
+
+/* =========================
+   3. HERO SECTION
+========================= */
+
+.hero {
+    padding: 90px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    min-height: 520px;
+    background:
+        radial-gradient(circle at 85% 20%, #1d3152, transparent 35%),
+        #081120;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.hero-tag,
+.section-tag {
+    color: var(--primary);
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    font-size: 60px;
+    line-height: 1.15;
+    margin: 20px 0;
+}
+
+.hero h1 span {
+    color: var(--primary);
+}
+
+.hero-content p {
+    color: var(--muted);
+    max-width: 550px;
+    font-size: 17px;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* =========================
+   4. BUTTONS
+========================= */
+
+.btn {
+    display: inline-block;
+    padding: 13px 24px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+.btn.primary {
+    background: linear-gradient(135deg, #38bdf8, #6366f1);
+    color: white;
+}
+
+.btn.primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px #38bdf830;
+}
+
+.btn.secondary {
+    border: 1px solid #334155;
+    color: white;
+    background: #111d31;
+}
+
+.btn.secondary:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+/* =========================
+   5. HERO VISUAL
+========================= */
+
+.hero-visual {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.shield-circle {
+    width: 270px;
+    height: 270px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #172b48, #233d68);
+    border: 1px solid #38577c;
+    box-shadow: 0 0 80px #38bdf820;
+}
+
+.shield {
+    font-size: 115px;
+}
+
+.floating-card {
+    position: absolute;
+    padding: 12px 18px;
+    border-radius: 12px;
+    background: #15243a;
+    border: 1px solid #334b68;
+    box-shadow: 0 10px 30px #00000040;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.card-one {
+    top: 30px;
+    right: -20px;
+}
+
+.card-two {
+    bottom: 30px;
+    left: -20px;
+}
+
+/* =========================
+   6. SECTION HEADINGS
+========================= */
+
+.section-heading {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 50px;
+}
+
+.section-heading h2 {
+    font-size: 36px;
+    margin: 15px 0;
+}
+
+.section-heading p {
+    color: var(--muted);
+}
+
+/* =========================
+   7. INTRO SECTION
+========================= */
+
+.intro-section {
+    padding: 80px 8%;
+    background-color: #0c1729;
+}
+
+.intro-grid {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.intro-card {
+    flex: 1;
+    min-width: 220px;
+    background: var(--card);
+    padding: 30px;
+    border: 1px solid #22334b;
+    border-radius: 14px;
+    transition: 0.3s;
+}
+
+.intro-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--primary);
+}
+
+.card-icon {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.intro-card h3 {
+    margin-bottom: 10px;
+}
+
+.intro-card p {
+    color: var(--muted);
+    font-size: 15px;
+}
+
+/* =========================
+   8. TOPICS SECTION
+========================= */
+
+.topics-section {
+    padding: 85px 8%;
+}
+
+.topics-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.topic-card {
+    padding: 35px;
+    border-radius: 16px;
+    background-color: var(--card);
+    border: 1px solid #22334b;
+    transition: 0.3s;
+}
+
+.topic-card:hover {
+    transform: translateY(-6px);
+    border-color: #64748b;
+}
+
+.topic-icon {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.topic-card h3 {
+    font-size: 23px;
+    margin-bottom: 12px;
+}
+
+.topic-card p {
+    color: var(--muted);
+    margin-bottom: 20px;
+}
+
+.topic-link {
+    color: var(--primary);
+    font-weight: bold;
+}
+
+.topic-link:hover {
+    color: white;
+}
+
+.privacy-card {
+    background: linear-gradient(145deg, #11243b, #111d31);
+}
+
+.safety-card {
+    background: linear-gradient(145deg, #17243e, #111d31);
+}
+
+.cyber-card {
+    background: linear-gradient(145deg, #302044, #111d31);
+}
+
+.guidelines-card {
+    background: linear-gradient(145deg, #123a38, #111d31);
+}
+
+/* =========================
+   9. REMINDER SECTION
+========================= */
+
+.reminder-section {
+    padding: 50px 8% 90px;
+}
+
+.reminder-box {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 40px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #132c49, #1c2550);
+    border: 1px solid #344d72;
+}
+
+.reminder-icon {
+    font-size: 65px;
+}
+
+.reminder-content h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.reminder-content p {
+    color: #cbd5e1;
+    margin-bottom: 20px;
+}
+
+/* =========================
+   10. FOOTER
+========================= */
+
+.footer {
+    background-color: #050b16;
+    padding: 50px 8% 25px;
+    text-align: center;
+    border-top: 1px solid #1e2c42;
+}
+
+.footer h2 {
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.footer p {
+    color: var(--muted);
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 22px;
+    flex-wrap: wrap;
+    margin: 25px 0;
+}
+
+.footer-links a {
+    color: #cbd5e1;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    color: var(--primary);
+}
+
+.copyright {
+    font-size: 13px;
+    border-top: 1px solid #1e2c42;
+    padding-top: 20px;
+}
+
+/* =========================
+   11. RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 1000px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        justify-content: center;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 650px) {
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero {
+        padding: 60px 6%;
+    }
+
+    .hero-visual {
+        width: 280px;
+        height: 280px;
+    }
+
+    .shield-circle {
+        width: 220px;
+        height: 220px;
+    }
+
+    .shield {
+        font-size: 90px;
+    }
+
+    .card-one {
+        right: -5px;
+    }
+
+    .card-two {
+        left: -5px;
+    }
+
+    .topics-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading h2 {
+        font-size: 28px;
+    }
+
+    .reminder-box {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .intro-section,
+    .topics-section {
+        padding: 60px 6%;
+    }
+
+    .navbar {
+        padding: 20px 5%;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+}
+
+/* =========================
+   ONLINE PRIVACY PAGE
+========================= */
+
+.topic-hero {
+    padding: 75px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    background:
+        radial-gradient(circle at 85% 30%, #203b63, transparent 35%),
+        #081120;
+    min-height: 370px;
+}
+
+.topic-hero-content {
+    max-width: 750px;
+}
+
+.topic-hero h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin: 18px 0;
+}
+
+.topic-hero h1 span {
+    color: var(--primary);
+}
+
+.topic-hero p {
+    color: var(--muted);
+    font-size: 17px;
+    margin-bottom: 25px;
+}
+
+.topic-hero-icon {
+    font-size: 120px;
+    padding: 35px;
+    border-radius: 50%;
+    background: #172b48;
+    border: 1px solid #344d72;
+    box-shadow: 0 0 70px #38bdf820;
+}
+
+.content-section {
+    padding: 80px 8%;
+}
+
+.alternate-section {
+    background: #0c1729;
+}
+
+.privacy-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.privacy-info-card {
+    background: var(--card);
+    border: 1px solid #22334b;
+    padding: 30px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.privacy-info-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary);
+}
+
+.info-icon {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.privacy-info-card h3 {
+    margin-bottom: 12px;
+}
+
+.privacy-info-card p,
+.privacy-info-card li {
+    color: var(--muted);
+}
+
+.privacy-info-card ul {
+    margin-top: 15px;
+    padding-left: 20px;
+}
+
+.privacy-info-card li {
+    margin-bottom: 8px;
+}
+
+.privacy-benefits {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.benefit-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    background: var(--card);
+    border: 1px solid #22334b;
+    padding: 25px;
+    border-radius: 14px;
+}
+
+.benefit-item > span {
+    font-size: 35px;
+}
+
+.benefit-item p {
+    color: var(--muted);
+}
+
+.privacy-tips-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.privacy-tip {
+    background: var(--card);
+    border: 1px solid #22334b;
+    border-radius: 15px;
+    padding: 30px;
+    transition: 0.3s;
+}
+
+.privacy-tip:hover {
+    transform: translateY(-5px);
+    border-color: #818cf8;
+}
+
+.tip-number {
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+.privacy-tip p {
+    color: var(--muted);
+    margin-top: 10px;
+}
+
+.privacy-warning-section {
+    background: #0c1729;
+}
+
+.privacy-warning {
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+    background: #30251d;
+    border: 1px solid #785536;
+    border-radius: 16px;
+    padding: 35px;
+}
+
+.warning-icon {
+    font-size: 45px;
+}
+
+.privacy-warning h2 {
+    margin: 10px 0;
+}
+
+.privacy-warning p {
+    color: #d6c3ae;
+    margin-bottom: 15px;
+}
+
+.privacy-warning ul {
+    padding-left: 20px;
+    color: #e6d3bd;
+}
+
+.privacy-warning li {
+    margin-bottom: 8px;
+}
+
+/* Privacy page responsive layout */
+
+@media (max-width: 900px) {
+    .privacy-grid,
+    .privacy-tips-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .topic-hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .topic-hero-icon {
+        font-size: 90px;
+    }
+}
+
+@media (max-width: 650px) {
+    .privacy-grid,
+    .privacy-tips-grid,
+    .privacy-benefits {
+        grid-template-columns: 1fr;
+    }
+
+    .topic-hero h1 {
+        font-size: 36px;
+    }
+
+    .topic-hero {
+        padding: 55px 6%;
+    }
+
+    .privacy-warning {
+        flex-direction: column;
+    }
+
+    .content-section {
+        padding: 60px 6%;
+    }
+}
+
+/* =========================
+   PRIVACY PAGE EXPANSION
+========================= */
+
+.social-privacy-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.social-privacy-card {
+    background: linear-gradient(145deg, #14243b, #111d31);
+    border: 1px solid #22334b;
+    padding: 30px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.social-privacy-card:hover {
+    transform: translateY(-5px);
+    border-color: #818cf8;
+}
+
+.social-privacy-card p {
+    color: var(--muted);
+    margin-top: 10px;
+}
+
+.cookie-layout {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.cookie-card {
+    background: var(--card);
+    border: 1px solid #22334b;
+    padding: 30px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.cookie-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary);
+}
+
+.cookie-card h3 {
+    margin-bottom: 12px;
+}
+
+.cookie-card p {
+    color: var(--muted);
+}
+
+.cookie-note {
+    margin-top: 30px;
+    padding: 25px;
+    background: #17243a;
+    border-left: 4px solid #38bdf8;
+    border-radius: 10px;
+    color: #cbd5e1;
+}
+
+.scenario-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.scenario-card {
+    background: var(--card);
+    padding: 30px;
+    border: 1px solid #22334b;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.scenario-card:hover {
+    border-color: #818cf8;
+    transform: translateY(-4px);
+}
+
+.scenario-label {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.scenario-card h3 {
+    margin: 15px 0;
+}
+
+.scenario-card > p {
+    color: var(--muted);
+    margin-bottom: 20px;
+}
+
+.scenario-response {
+    background: #162b42;
+    border-left: 3px solid #38bdf8;
+    padding: 18px;
+    border-radius: 8px;
+    color: #dbeafe;
+}
+
+.scenario-response strong {
+    display: block;
+    margin-bottom: 8px;
+    color: #38bdf8;
+}
+
+.privacy-self-check {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.self-check-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    background: var(--card);
+    border: 1px solid #22334b;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.check-symbol {
+    background: #123b35;
+    color: #6ee7b7;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-weight: bold;
+}
+
+.self-check-item p {
+    color: #cbd5e1;
+}
+
+.self-check-message {
+    margin-top: 30px;
+    padding: 35px;
+    text-align: center;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #142b46, #252650);
+    border: 1px solid #344d72;
+}
+
+.self-check-message h3 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.self-check-message p {
+    color: var(--muted);
+}
+
+/* Responsive additions */
+
+@media (max-width: 900px) {
+    .cookie-layout {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+    .social-privacy-grid,
+    .cookie-layout,
+    .scenario-grid,
+    .privacy-self-check {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =========================
+   DIGITAL SAFETY PAGE
+========================= */
+
+.safety-hero {
+    background:
+        radial-gradient(circle at 85% 20%, #1b4660, transparent 35%),
+        #081120;
+}
+
+.digital-safety-intro {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.digital-safety-card {
+    background: var(--card);
+    border: 1px solid #22334b;
+    padding: 30px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.digital-safety-card:hover {
+    transform: translateY(-5px);
+    border-color: #38bdf8;
+}
+
+.safety-icon {
+    font-size: 40px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.digital-safety-card p {
+    color: var(--muted);
+    margin-top: 10px;
+}
+
+.digital-threat-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.digital-threat-card {
+    background: var(--card);
+    border: 1px solid #22334b;
+    border-radius: 15px;
+    padding: 30px;
+    transition: 0.3s;
+}
+
+.digital-threat-card:hover {
+    transform: translateY(-5px);
+    border-color: #818cf8;
+}
+
+.threat-icon {
+    font-size: 40px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.digital-threat-card h3 {
+    margin-bottom: 12px;
+}
+
+.digital-threat-card p {
+    color: var(--muted);
+    margin-bottom: 20px;
+}
+
+.threat-warning {
+    padding: 18px;
+    background: #30251d;
+    border-left: 3px solid #f59e0b;
+    border-radius: 8px;
+    color: #e6d3bd;
+}
+
+.threat-warning strong {
+    display: block;
+    color: #fbbf24;
+    margin-bottom: 8px;
+}
+
+.phishing-example {
+    max-width: 850px;
+    margin: auto;
+    border: 1px solid #334155;
+    border-radius: 15px;
+    overflow: hidden;
+    background: var(--card);
+}
+
+.fake-message-header {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    padding: 25px;
+    background: #17243a;
+    border-bottom: 1px solid #334155;
+}
+
+.fake-message-header > span {
+    font-size: 35px;
+}
+
+.fake-message-header p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.fake-message-body {
+    padding: 30px;
+}
+
+.fake-message-body > p {
+    margin-bottom: 15px;
+    color: #cbd5e1;
+}
+
+.message-red-flags {
+    padding: 25px;
+    background: #30251d;
+    border-radius: 12px;
+    margin-top: 25px;
+}
+
+.message-red-flags h3 {
+    color: #fbbf24;
+    margin-bottom: 15px;
+}
+
+.message-red-flags ul {
+    padding-left: 20px;
+    color: #e6d3bd;
+}
+
+.message-red-flags li {
+    margin-bottom: 10px;
+}
+
+.safe-message-response {
+    padding: 25px;
+    background: #123b35;
+    border-top: 1px solid #2b6658;
+    color: #d1fae5;
+}
+
+.safe-message-response strong {
+    color: #6ee7b7;
+}
+
+.browsing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.browsing-card {
+    background: var(--card);
+    border: 1px solid #22334b;
+    border-radius: 15px;
+    padding: 30px;
+    transition: 0.3s;
+}
+
+.browsing-card:hover {
+    transform: translateY(-5px);
+    border-color: #38bdf8;
+}
+
+.browsing-icon {
+    font-size: 38px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.browsing-card p {
+    color: var(--muted);
+    margin-top: 10px;
+}
+
+.digital-scenario-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.digital-scenario-card {
+    background: var(--card);
+    border: 1px solid #22334b;
+    border-radius: 15px;
+    padding: 30px;
+    transition: 0.3s;
+}
+
+.digital-scenario-card:hover {
+    border-color: #818cf8;
+    transform: translateY(-4px);
+}
+
+.digital-scenario-card h3 {
+    margin: 15px 0;
+}
+
+.digital-scenario-card > p {
+    color: var(--muted);
+    margin-bottom: 20px;
+}
+
+.digital-scenario-answer {
+    background: #162b42;
+    border-left: 3px solid #38bdf8;
+    border-radius: 8px;
+    padding: 18px;
+    color: #dbeafe;
+}
+
+.digital-scenario-answer strong {
+    display: block;
+    color: #38bdf8;
+    margin-bottom: 8px;
+}
+
+.digital-checklist {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.digital-check-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    background: var(--card);
+    border: 1px solid #22334b;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.digital-check-item > span {
+    background: #123b35;
+    color: #6ee7b7;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.digital-check-item p {
+    color: #cbd5e1;
+}
+
+/* Digital Safety Responsive Design */
+
+@media (max-width: 900px) {
+    .digital-safety-intro,
+    .browsing-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+    .digital-safety-intro,
+    .digital-threat-grid,
+    .browsing-grid,
+    .digital-scenario-grid,
+    .digital-checklist {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =========================
+   CYBERBULLYING PAGE
+========================= */
+
+.cyber-hero {
+    background: linear-gradient(135deg, #101a38, #44246f, #173c70);
+}
+
+.cyber-intro-grid,
+.cyber-type-grid,
+.cyber-response-grid,
+.bystander-grid,
+.cyber-scenario-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.cyber-intro-card,
+.cyber-type-card,
+.cyber-sign-card,
+.cyber-response-card,
+.bystander-card,
+.cyber-scenario-card {
+    background: var(--card);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 25px;
+    transition: 0.3s;
+}
+
+.cyber-intro-card:hover,
+.cyber-type-card:hover,
+.cyber-response-card:hover,
+.bystander-card:hover,
+.cyber-scenario-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary);
+}
+
+.cyber-intro-card h3,
+.cyber-type-card h3,
+.cyber-sign-card h3,
+.cyber-response-card h3,
+.bystander-card h3,
+.cyber-scenario-card h3 {
+    margin-bottom: 14px;
+    color: var(--primary);
+}
+
+.cyber-intro-card p,
+.cyber-type-card p,
+.cyber-sign-card p,
+.cyber-response-card p,
+.bystander-card p,
+.cyber-scenario-card p {
+    color: var(--muted);
+    line-height: 1.7;
+}
+
+.cyber-signs-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.cyber-sign-card ul {
+    padding-left: 20px;
+    margin-top: 15px;
+}
+
+.cyber-sign-card li {
+    margin-bottom: 12px;
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+.response-number {
+    display: inline-block;
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--secondary);
+    margin-bottom: 15px;
+}
+
+.cyber-scenario-answer {
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(99, 102, 241, 0.08);
+    border-radius: 12px;
+}
+
+.cyber-scenario-answer strong {
+    color: var(--secondary);
+    display: block;
+    margin-bottom: 10px;
+}
+
+.cyber-message-box {
+    text-align: center;
+    padding: 45px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #202e59, #492c76);
+}
+
+.cyber-message-box h2 {
+    margin-bottom: 20px;
+}
+
+.cyber-message-box p {
+    color: var(--muted);
+    line-height: 1.8;
+    max-width: 750px;
+    margin: auto;
+}
+
+/* Cyberbullying responsive design */
+
+@media (max-width: 900px) {
+    .cyber-intro-grid,
+    .cyber-type-grid,
+    .cyber-response-grid,
+    .bystander-grid,
+    .cyber-scenario-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .cyber-intro-grid,
+    .cyber-type-grid,
+    .cyber-response-grid,
+    .bystander-grid,
+    .cyber-scenario-grid,
+    .cyber-signs-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cyber-message-box {
+        padding: 25px;
+    }
+}
+
+/* INTERNET SAFETY GUIDELINES PAGE */
+
+.guidelines-hero {
+    background: linear-gradient(135deg, #102a43, #234e70, #345d9d);
+}
+
+.golden-rules-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.golden-rule-card {
+    background: var(--card);
+    padding: 28px;
+    border-radius: 18px;
+    border: 1px solid rgba(255,255,255,0.06);
+    transition: 0.3s;
+}
+
+.golden-rule-card:hover {
+    transform: translateY(-5px);
+}
+
+.rule-number {
+    display: inline-block;
+    color: #60a5fa;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.golden-rule-card h3 {
+    margin-bottom: 12px;
+}
+
+.golden-rule-card p {
+    color: var(--muted);
+    line-height: 1.8;
+}
+
+.password-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.password-card {
+    background: var(--card);
+    padding: 35px;
+    border-radius: 18px;
+}
+
+.password-card h3 {
+    margin-bottom: 20px;
+    color: #60a5fa;
+}
+
+.password-card ul {
+    padding-left: 22px;
+}
+
+.password-card li {
+    margin-bottom: 16px;
+    line-height: 1.8;
+    color: var(--muted);
+}
+
+.password-card p {
+    color: var(--muted);
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.password-highlight {
+    border: 1px solid rgba(96,165,250,0.25);
+}
+
+.device-safety-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.device-safety-card {
+    background: var(--card);
+    padding: 28px;
+    border-radius: 18px;
+    transition: 0.3s;
+}
+
+.device-safety-card:hover {
+    transform: translateY(-5px);
+}
+
+.device-icon {
+    font-size: 35px;
+    margin-bottom: 18px;
+}
+
+.device-safety-card h3 {
+    margin-bottom: 12px;
+}
+
+.device-safety-card p {
+    color: var(--muted);
+    line-height: 1.8;
+}
+
+.social-guidelines-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.social-guideline {
+    background: var(--card);
+    padding: 30px;
+    border-radius: 18px;
+    border-left: 4px solid #60a5fa;
+}
+
+.social-guideline h3 {
+    margin-bottom: 12px;
+}
+
+.social-guideline p {
+    color: var(--muted);
+    line-height: 1.8;
+}
+
+.communication-box {
+    background: var(--card);
+    padding: 35px;
+    border-radius: 18px;
+    margin-top: 30px;
+}
+
+.communication-box ul {
+    padding-left: 25px;
+}
+
+.communication-box li {
+    margin-bottom: 18px;
+    line-height: 1.8;
+    color: var(--muted);
+}
+
+.daily-checklist-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    margin-top: 35px;
+}
+
+.daily-check-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: var(--card);
+    padding: 22px;
+    border-radius: 15px;
+}
+
+.daily-check-item span {
+    font-size: 24px;
+    font-weight: bold;
+    color: #60a5fa;
+}
+
+.daily-check-item p {
+    color: var(--muted);
+}
+
+.guidelines-banner {
+    text-align: center;
+    padding: 50px;
+    border-radius: 24px;
+    background: linear-gradient(135deg, #14365d, #254e87, #344e9a);
+}
+
+.guidelines-banner h2 {
+    margin-bottom: 20px;
+}
+
+.guidelines-banner p {
+    max-width: 750px;
+    margin: auto;
+    line-height: 1.9;
+}
+
+/* RESPONSIVE GUIDELINES PAGE */
+
+@media (max-width: 900px) {
+    .golden-rules-grid,
+    .device-safety-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .password-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .golden-rules-grid,
+    .device-safety-grid,
+    .social-guidelines-grid,
+    .daily-checklist-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .guidelines-banner {
+        padding: 30px 20px;
+    }
+}
+
+/* ================================
+   INTERNET SAFETY QUIZ PAGE
+================================ */
+
+.quiz-hero {
+    background: linear-gradient(135deg, #182848, #304b9a, #55318a);
+}
+
+.quiz-intro {
+    text-align: center;
+}
+
+.quiz-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.quiz-info-item {
+    background: var(--card);
+    padding: 25px;
+    border-radius: 18px;
+}
+
+.quiz-info-item h3 {
+    font-size: 32px;
+    color: #a78bfa;
+    margin-bottom: 10px;
+}
+
+.quiz-info-item p {
+    color: var(--muted);
+}
+
+.quiz-container {
+    max-width: 950px;
+    margin: auto;
+}
+
+.quiz-question {
+    background: var(--card);
+    padding: 30px;
+    border-radius: 18px;
+    margin-bottom: 25px;
+    border: 1px solid rgba(255,255,255,0.06);
+}
+
+.quiz-question h3 {
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.quiz-option {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 16px;
+    margin-bottom: 12px;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.04);
+    cursor: pointer;
+    line-height: 1.7;
+    transition: 0.2s;
+}
+
+.quiz-option:hover {
+    background: rgba(139,92,246,0.12);
+}
+
+.quiz-option input {
+    margin-top: 5px;
+    accent-color: #a78bfa;
+}
+
+.quiz-buttons {
+    display: flex;
+    gap: 18px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 35px;
+}
+
+.quiz-submit-btn,
+.quiz-reset-btn {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.quiz-submit-btn {
+    background: #7c3aed;
+    color: white;
+}
+
+.quiz-submit-btn:hover {
+    transform: translateY(-3px);
+    background: #6d28d9;
+}
+
+.quiz-reset-btn {
+    background: rgba(255,255,255,0.10);
+    color: var(--text);
+}
+
+.quiz-reset-btn:hover {
+    transform: translateY(-3px);
+}
+
+.quiz-result {
+    display: none;
+    margin-top: 35px;
+    padding: 35px;
+    border-radius: 20px;
+    text-align: center;
+    background: var(--card);
+    border: 1px solid rgba(167,139,250,0.3);
+}
+
+.quiz-result h2 {
+    margin-bottom: 15px;
+    color: #a78bfa;
+}
+
+.quiz-result p {
+    line-height: 1.8;
+    margin-bottom: 12px;
+}
+
+.quiz-bottom-banner {
+    text-align: center;
+    padding: 50px;
+    border-radius: 24px;
+    background: linear-gradient(135deg, #25215a, #4c2678, #263f85);
+}
+
+.quiz-bottom-banner h2 {
+    margin-bottom: 20px;
+}
+
+.quiz-bottom-banner p {
+    max-width: 750px;
+    margin: auto;
+    line-height: 1.9;
+}
+
+/* RESPONSIVE QUIZ PAGE */
+
+@media (max-width: 600px) {
+
+    .quiz-info {
+        grid-template-columns: 1fr;
+    }
+
+    .quiz-question {
+        padding: 22px;
+    }
+
+    .quiz-option {
+        padding: 13px;
+    }
+
+    .quiz-bottom-banner {
+        padding: 30px 20px;
+    }
+}
